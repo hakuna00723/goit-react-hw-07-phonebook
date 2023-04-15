@@ -50,7 +50,7 @@ const contactsSlice = createSlice({
       })
       .addCase(fetchDeleteContact.fulfilled, (state, { payload }) => {
         state.loading = false;
-        const index = state.items.findIndex(item => item.id === payload);
+        const index = state.items.findIndex(item => item.id === payload.id);
         state.items.splice(index, 1);
       })
 
